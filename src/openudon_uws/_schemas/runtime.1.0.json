@@ -1,0 +1,60 @@
+{
+  "$id": "https://github.com/OpenUdon/uws/versions/runtime.1.0.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UWS Runtime Supplement 1.0",
+  "description": "Wire metadata schema for the uws.runtime.1.0 extension profile supplement.",
+  "type": "object",
+  "properties": {
+    "x-uws-runtime": {
+      "$ref": "#/$defs/operation-runtime"
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "runtime-type": {
+      "type": "string",
+      "enum": [
+        "ssh",
+        "cmd",
+        "fnct",
+        "fileio",
+        "sql",
+        "s3",
+        "smtp",
+        "dns",
+        "ldaps",
+        "scp",
+        "sftp",
+        "llm"
+      ]
+    },
+    "operation-runtime": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "$ref": "#/$defs/runtime-type"
+        },
+        "command": {
+          "type": "string"
+        },
+        "workingDir": {
+          "type": "string"
+        },
+        "function": {
+          "type": "string"
+        },
+        "workflow": {
+          "type": "string"
+        },
+        "arguments": {
+          "type": "array",
+          "items": true
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

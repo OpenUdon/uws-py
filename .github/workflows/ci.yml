@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: tools/go-oracle/go.mod
+          cache-dependency-path: tools/go-oracle/go.sum
+      - run: uv sync --locked
+      - name: Gates G0-G6 (differential gate required)
+        env:
+          UWS_REQUIRE_ORACLE: "1"
+        run: scripts/gate.sh
+      - name: Wheel smoke test
+        run: |
+          uv build
+          python -m venv /tmp/wheel-venv
+          /tmp/wheel-venv/bin/pip install dist/*.whl
+          /tmp/wheel-venv/bin/python -c "import openudon_uws, importlib.resources as r; assert r.files('openudon_uws').joinpath('_schemas/1.13.0.json').is_file()"
