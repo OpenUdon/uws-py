@@ -47,7 +47,7 @@ those lessons (and their Python analogs) in from day one.
 ```text
 src/openudon_uws/
   __init__.py        public API (below)
-  diagnostics.py     Diagnostic(path, message, layer, code), ValidationResult, DecodeError
+  diagnostics.py     Diagnostic(path, message, layer), ValidationResult, DecodeError
   strict/            json.py, yaml.py (yaml.v3 resolver), __init__.py decode_document
   versions.py        published list, exact admission, semver compare/gates
   schema/            __init__.py (validator cache per version), goregex.py, goformats.py (net/url port, date-time)
@@ -143,7 +143,14 @@ Oracle harness, with the lessons from the TS review:
 
 ## Status (2026-11-03)
 
-- M1–M4 are complete on `main`. Decoding, URL/format/pattern/keyword semantics, Go struct decoding (from a
-  reflected type model) and the semantic and executable layers match Go on every hand-written vector and on
-  3,000 seeded mutations (JSON, YAML and executable).
-- M5 (expressions), M6 (profiles) and M7 (release prep) are next.
+- M1–M7 are complete on `main`. Every layer is checked against the Go oracle, and all differentials report zero
+  mismatches:
+  - Decoding (core and profile): exact decoded values.
+  - URLs, formats, patterns and keywords.
+  - Struct decoding: a reflected model of the Go types.
+  - Semantic and executable layers: 3,000 seeded mutations as JSON and YAML.
+  - Expressions: 8,000 cases, compared by verdict and error kind.
+  - Profiles: about 12,000 mutations.
+  - Request digests.
+- Open: stable diagnostic codes (messages are not a stable API yet, as in uws-ts) and publishing to PyPI, which
+  needs approval.
