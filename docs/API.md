@@ -5,14 +5,15 @@ All entry points are importable from `openudon_uws`. Validators return a `Valida
 ```python
 @dataclass
 class ValidationResult:
-    valid: bool                     # the accept/reject verdict compared against Go (gate G6)
-    diagnostics: list[Diagnostic]   # empty when valid
+    valid: bool  # the accept/reject verdict compared against Go (gate G6)
+    diagnostics: list[Diagnostic]  # empty when valid
+
 
 @dataclass(frozen=True)
 class Diagnostic:
-    path: str      # Go validator form, e.g. "operations[0].request"; "" for document-level problems
-    message: str   # human readable; not a stable API
-    layer: str     # "decode" | "version" | "schema" | "semantic" | "executable" | "expression" | "profile"
+    path: str  # Go validator form, e.g. "operations[0].request"; "" for document-level problems
+    message: str  # human readable; not a stable API
+    layer: str  # "decode" | "version" | "schema" | "semantic" | "executable" | "expression" | "profile"
 ```
 
 `ValidationResult` is truthy exactly when `valid` is true. Message text is not a stable API; match on `valid`, `layer`
