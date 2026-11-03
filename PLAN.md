@@ -140,3 +140,10 @@ Oracle harness, with the lessons from the TS review:
 - The CI workflow runs on push to `main` with Python 3.11 and 3.13 plus Go from `tools/go-oracle/go.mod`.
 - Afterwards, a cross-check report shows the Python and TS verdicts on the shared adversarial vectors. Any
   disagreement with Go in uws-ts is reported to the user, not fixed in uws-ts from this session.
+
+## Status (2026-11-03)
+
+- M1–M4 are complete on `main`. Decoding, URL/format/pattern/keyword semantics, Go struct decoding (from a
+  reflected type model) and the semantic and executable layers match Go on every hand-written vector and on
+  3,000 seeded mutations (JSON, YAML and executable).
+- M5 (expressions), M6 (profiles) and M7 (release prep) are next.

@@ -32,6 +32,16 @@ class ResolveError(ValueError):
     """yaml.v3 ``failf("cannot decode ...")``."""
 
 
+class YamlTimestamp(str):
+    """An unquoted YAML timestamp, as the RFC 3339 text Go's ``json.Marshal`` writes for its ``time.Time``.
+
+    The document layer validates the schema against a ``time.Time`` stand-in at these positions, as upstream's raw
+    schema pass sees ``time.Time`` there.
+    """
+
+    __slots__ = ()
+
+
 @dataclass(frozen=True)
 class GoFloat:
     """A float64 that ``json.Marshal`` refuses (NaN or ±Inf)."""
@@ -254,7 +264,7 @@ def _resolve(tag: str, value: str) -> tuple[str, Any]:
             if tag in ("", TIMESTAMP_TAG):
                 stamp = parse_timestamp(value)
                 if stamp is not None:
-                    return TIMESTAMP_TAG, stamp
+                    return TIMESTAMP_TAG, YamlTimestamp(stamp)
             plain = value.replace("_", "")
             as_int = _parse_int_base0(plain)
             if as_int is not None:

@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import math
 import re
+from json.decoder import scanstring  # type: ignore[attr-defined]
 from typing import Any
 
 from ..diagnostics import DecodeError
@@ -20,6 +21,7 @@ JsonValue = Any
 
 _SURROGATE_ESCAPE = re.compile(r"\\u[dD][89a-fA-F]")
 _LONE_SURROGATE = re.compile("[\ud800-\udfff]")
+_REPLACEMENT = "\ufffd"
 
 
 def decode_utf8(data: bytes) -> str:
@@ -51,13 +53,146 @@ def _parse_int(text: str) -> int:
 
 
 def _fix_surrogates(value: JsonValue) -> JsonValue:
+    """Replaces unpaired surrogates with U+FFFD everywhere (iterative: values may nest 10000 deep)."""
     if type(value) is str:
-        return _LONE_SURROGATE.sub("�", value)
-    if type(value) is list:
-        return [_fix_surrogates(item) for item in value]
-    if type(value) is dict:
-        return {_LONE_SURROGATE.sub("�", k): _fix_surrogates(v) for k, v in value.items()}
+        return _LONE_SURROGATE.sub(_REPLACEMENT, value)
+    stack: list[Any] = [value]
+    while stack:
+        item = stack.pop()
+        if type(item) is list:
+            for i, v in enumerate(item):
+                if type(v) is str:
+                    item[i] = _LONE_SURROGATE.sub(_REPLACEMENT, v)
+                elif type(v) in (list, dict):
+                    stack.append(v)
+        elif type(item) is dict:
+            for k in list(item):
+                v = item.pop(k)
+                if type(v) is str:
+                    v = _LONE_SURROGATE.sub(_REPLACEMENT, v)
+                elif type(v) in (list, dict):
+                    stack.append(v)
+                item[_LONE_SURROGATE.sub(_REPLACEMENT, k)] = v
     return value
+
+
+# encoding/json's scanner refuses nesting deeper than this.
+MAX_DEPTH = 10000
+_WS = frozenset(" \t\n\r")
+_NUMBER = re.compile(r"-?(?:0|[1-9][0-9]*)(\.[0-9]+)?([eE][-+]?[0-9]+)?")
+
+
+def _depth(value: JsonValue) -> int:
+    deepest = 0
+    stack: list[tuple[Any, int]] = [(value, 0)]
+    while stack:
+        item, level = stack.pop()
+        if type(item) in (list, dict):
+            level += 1
+            deepest = max(deepest, level)
+            stack.extend((v, level) for v in (item.values() if type(item) is dict else item))
+    return deepest
+
+
+def _parse_iterative(text: str, reject_duplicates: bool) -> JsonValue:
+    """A non-recursive JSON parser with Go's depth limit.
+
+    Used when the C scanner hits Python's recursion limit: Python 3.11 bounds it by the interpreter recursion depth,
+    while Go accepts nesting up to 10000.
+    """
+    n = len(text)
+
+    def skip(i: int) -> int:
+        while i < n and text[i] in _WS:
+            i += 1
+        return i
+
+    def fail(msg: str, at: int) -> DecodeError:
+        return DecodeError(f"invalid JSON: {msg} at offset {at}")
+
+    def read_key(i: int, frame: list[Any]) -> int:
+        if i >= n or text[i] != '"':
+            raise fail("object member name is not a string", i)
+        try:
+            key, i = scanstring(text, i + 1, True)
+        except ValueError as exc:
+            raise fail(str(exc), i) from exc
+        i = skip(i)
+        if i >= n or text[i] != ":":
+            raise fail("expected ':'", i)
+        frame[1] = key
+        return skip(i + 1)
+
+    stack: list[list[Any]] = []  # frames: [container, pending member name]
+    i = skip(0)
+    while True:
+        if i >= n:
+            raise fail("unexpected end of input", i)
+        c = text[i]
+        value: Any
+        opened = False
+        if c in "{[":
+            if len(stack) >= MAX_DEPTH:
+                raise DecodeError(f"invalid JSON: exceeded max depth of {MAX_DEPTH}")
+            value = {} if c == "{" else []
+            opened = True
+            i = skip(i + 1)
+        elif c == '"':
+            try:
+                value, i = scanstring(text, i + 1, True)
+            except ValueError as exc:
+                raise fail(str(exc), i) from exc
+        elif text.startswith("true", i):
+            value, i = True, i + 4
+        elif text.startswith("false", i):
+            value, i = False, i + 5
+        elif text.startswith("null", i):
+            value, i = None, i + 4
+        else:
+            m = _NUMBER.match(text, i)
+            if m is None:
+                raise fail("unexpected character", i)
+            literal = m.group(0)
+            value = _parse_float(literal) if (m.group(1) or m.group(2)) else _parse_int(literal)
+            i = m.end()
+        if stack:
+            frame = stack[-1]
+            if type(frame[0]) is dict:
+                if reject_duplicates and frame[1] in frame[0]:
+                    raise DecodeError(f"JSON object contains duplicate member {json.dumps(frame[1])}")
+                frame[0][frame[1]] = value
+            else:
+                frame[0].append(value)
+        else:
+            root = value
+        if opened:
+            stack.append([value, None])
+            closer = "}" if type(value) is dict else "]"
+            if i < n and text[i] == closer:
+                i += 1
+                stack.pop()
+            else:
+                if type(value) is dict:
+                    i = read_key(i, stack[-1])
+                continue
+        while True:
+            i = skip(i)
+            if not stack:
+                if i != n:
+                    raise fail("trailing data", i)
+                return root
+            frame = stack[-1]
+            closer = "}" if type(frame[0]) is dict else "]"
+            if i < n and text[i] == ",":
+                i = skip(i + 1)
+                if type(frame[0]) is dict:
+                    i = read_key(i, frame)
+                break
+            if i < n and text[i] == closer:
+                i += 1
+                stack.pop()
+                continue
+            raise fail(f"expected ',' or {closer!r}", i)
 
 
 def parse_strict_json(text: str, *, reject_duplicates: bool = False) -> JsonValue:
@@ -89,8 +224,11 @@ def parse_strict_json(text: str, *, reject_duplicates: bool = False) -> JsonValu
         )
     except json.JSONDecodeError as exc:
         raise DecodeError(f"invalid JSON: {exc}") from exc
-    except RecursionError as exc:
-        raise DecodeError("JSON nesting is too deep") from exc
+    except RecursionError:
+        value = _parse_iterative(text, reject_duplicates)
+    else:
+        if text.count("[") + text.count("{") > MAX_DEPTH and _depth(value) > MAX_DEPTH:
+            raise DecodeError(f"invalid JSON: exceeded max depth of {MAX_DEPTH}")
     if _SURROGATE_ESCAPE.search(text):
         value = _fix_surrogates(value)
     return value

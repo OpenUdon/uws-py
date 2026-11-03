@@ -1,0 +1,1179 @@
+{
+ "root": {
+  "kind": "struct",
+  "name": "Document"
+ },
+ "types": {
+  "Case": {
+   "fields": [
+    {
+     "name": "name",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "when",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "body",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "steps",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Step"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Components": {
+   "fields": [
+    {
+     "name": "variables",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "ContentTrust": {
+   "fields": [
+    {
+     "name": "sourceDescriptions",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "operations",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "OperationContentTrust"
+       },
+       "kind": "ptr"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "triggers",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "workflows",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "WorkflowContentTrust"
+       },
+       "kind": "ptr"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Criterion": {
+   "fields": [
+    {
+     "name": "condition",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "context",
+     "type": {
+      "kind": "string"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Document": {
+   "fields": [
+    {
+     "name": "uws",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "info",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "Info"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "sourceDescriptions",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "SourceDescription"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "variables",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "operations",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Operation"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "workflows",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Workflow"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "triggers",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Trigger"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "results",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "StructuralResult"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "components",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "Components"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "contentTrust",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "ContentTrust"
+      },
+      "kind": "ptr"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "FailureAction": {
+   "fields": [
+    {
+     "name": "name",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "workflowId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "stepId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "retryAfter",
+     "type": {
+      "bits": 64,
+      "kind": "float"
+     }
+    },
+    {
+     "name": "retryLimit",
+     "type": {
+      "bits": 64,
+      "kind": "int"
+     }
+    },
+    {
+     "name": "criteria",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Criterion"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Idempotency": {
+   "fields": [
+    {
+     "name": "key",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "onConflict",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "ttl",
+     "type": {
+      "elem": {
+       "bits": 64,
+       "kind": "float"
+      },
+      "kind": "ptr"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Info": {
+   "fields": [
+    {
+     "name": "title",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "summary",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "description",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "version",
+     "type": {
+      "kind": "string"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Operation": {
+   "fields": [
+    {
+     "name": "operationId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "sourceDescription",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "sourceOperationId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "sourceOperationRef",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "openapiOperationId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "openapiOperationRef",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "description",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "request",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "effect",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "dependsOn",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "when",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "forEach",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "wait",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "timeout",
+     "type": {
+      "elem": {
+       "bits": 64,
+       "kind": "float"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "parallelGroup",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "successCriteria",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Criterion"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "onFailure",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "FailureAction"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "onSuccess",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "SuccessAction"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "outputs",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "OperationContentTrust": {
+   "fields": [
+    {
+     "name": "default",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "outputs",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "ParamSchema": {
+   "fields": [
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "format",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "$ref",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "properties",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "ParamSchema"
+       },
+       "kind": "ptr"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "required",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "items",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "ParamSchema"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "allOf",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "ParamSchema"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "oneOf",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "ParamSchema"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "anyOf",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "ParamSchema"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "PendingStep": {
+   "fields": [
+    {
+     "name": "purpose",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "inputs",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "ParamSchema"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "outputs",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "ParamSchema"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "effect",
+     "type": {
+      "kind": "string"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "SourceDescription": {
+   "fields": [
+    {
+     "name": "name",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "url",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Step": {
+   "fields": [
+    {
+     "name": "stepId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "description",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "operationRef",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "pending",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "PendingStep"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "body",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "inputs",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "dependsOn",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "when",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "forEach",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "wait",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "timeout",
+     "type": {
+      "elem": {
+       "bits": 64,
+       "kind": "float"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "workflow",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "parallelGroup",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "items",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "mode",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "batchSize",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "steps",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Step"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "cases",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Case"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "default",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Step"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "outputs",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "StructuralResult": {
+   "fields": [
+    {
+     "name": "name",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "kind",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "from",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "value",
+     "type": {
+      "kind": "string"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "SuccessAction": {
+   "fields": [
+    {
+     "name": "name",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "workflowId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "stepId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "criteria",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Criterion"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Trigger": {
+   "fields": [
+    {
+     "name": "triggerId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "path",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "methods",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "authentication",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "options",
+     "type": {
+      "elem": {
+       "kind": "any"
+      },
+      "kind": "map"
+     }
+    },
+    {
+     "name": "outputs",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "routes",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "TriggerRoute"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "TriggerRoute": {
+   "fields": [
+    {
+     "name": "output",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "to",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "Workflow": {
+   "fields": [
+    {
+     "name": "workflowId",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "type",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "description",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "inputs",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "ParamSchema"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "idempotency",
+     "type": {
+      "elem": {
+       "kind": "struct",
+       "name": "Idempotency"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "dependsOn",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "when",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "forEach",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "wait",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "timeout",
+     "type": {
+      "elem": {
+       "bits": 64,
+       "kind": "float"
+      },
+      "kind": "ptr"
+     }
+    },
+    {
+     "name": "items",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "mode",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "batchSize",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "steps",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Step"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "cases",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Case"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "default",
+     "type": {
+      "elem": {
+       "elem": {
+        "kind": "struct",
+        "name": "Step"
+       },
+       "kind": "ptr"
+      },
+      "kind": "slice"
+     }
+    },
+    {
+     "name": "outputs",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  },
+  "WorkflowContentTrust": {
+   "fields": [
+    {
+     "name": "default",
+     "type": {
+      "kind": "string"
+     }
+    },
+    {
+     "name": "inputs",
+     "type": {
+      "elem": {
+       "kind": "string"
+      },
+      "kind": "map"
+     }
+    }
+   ],
+   "unmarshalJSON": true
+  }
+ }
+}

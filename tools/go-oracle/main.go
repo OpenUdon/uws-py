@@ -4,16 +4,23 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"encoding/json"
 	"fmt"
+	"net"
+	"net/url"
 	"os"
+	"reflect"
 	"runtime/debug"
+	"strings"
 
 	"github.com/OpenUdon/uws/convert"
 	"github.com/OpenUdon/uws/expressions"
 	"github.com/OpenUdon/uws/mockruntime"
 	"github.com/OpenUdon/uws/schemas"
+	"github.com/OpenUdon/uws/uws1"
 	"github.com/OpenUdon/uws/validation"
+	"github.com/santhosh-tekuri/jsonschema/v6"
 	"gopkg.in/yaml.v3"
 )
 
@@ -67,6 +74,25 @@ func check(kind, path string) verdict {
 				return err
 			}
 			out, err := json.Marshal(value)
+			v.Value = out
+			return err
+		})
+	case "schema-check":
+		// {"schema": {...}, "value": ...}: santhosh-tekuri/jsonschema with format assertion, as upstream
+		// compiles the published schemas.
+		err = withData(path, schemaCheck)
+	case "url-parse":
+		// The file content is a URL; the value is Hostname/Port and loopback as Go computes them.
+		err = withData(path, func(data []byte) error {
+			u, err := url.Parse(string(data))
+			if err != nil {
+				return err
+			}
+			out, err := json.Marshal(map[string]any{
+				"scheme": u.Scheme, "opaque": u.Opaque, "host": u.Host, "path": u.Path, "rawQuery": u.RawQuery,
+				"fragment": u.Fragment, "hostname": u.Hostname(), "port": u.Port(), "hasUser": u.User != nil,
+				"loopback": net.ParseIP(u.Hostname()).IsLoopback(),
+			})
 			v.Value = out
 			return err
 		})
@@ -131,6 +157,93 @@ func checkExpressions(path string, out *json.Encoder) {
 	}
 }
 
+func schemaCheck(data []byte) error {
+	wrapper, err := jsonschema.UnmarshalJSON(bytes.NewReader(data))
+	if err != nil {
+		return err
+	}
+	obj, ok := wrapper.(map[string]any)
+	if !ok {
+		return fmt.Errorf("schema-check input must be an object")
+	}
+	compiler := jsonschema.NewCompiler()
+	compiler.AssertFormat()
+	if err := compiler.AddResource("inline.json", obj["schema"]); err != nil {
+		return err
+	}
+	schema, err := compiler.Compile("inline.json")
+	if err != nil {
+		return err
+	}
+	return schema.Validate(obj["value"])
+}
+
+// structModel describes the Go types encoding/json decodes a uws1.Document into, for uws-py's struct-decoding
+// model (src/openudon_uws/_gomodel.json).
+func structModel() map[string]any {
+	types := map[string]any{}
+	unmarshaler := reflect.TypeOf((*json.Unmarshaler)(nil)).Elem()
+	var describe func(t reflect.Type) any
+	describe = func(t reflect.Type) any {
+		switch t.Kind() {
+		case reflect.Pointer:
+			return map[string]any{"kind": "ptr", "elem": describe(t.Elem())}
+		case reflect.Slice:
+			if t.Elem().Kind() == reflect.Uint8 {
+				return map[string]any{"kind": "raw"}
+			}
+			return map[string]any{"kind": "slice", "elem": describe(t.Elem())}
+		case reflect.Map:
+			return map[string]any{"kind": "map", "elem": describe(t.Elem())}
+		case reflect.Interface:
+			return map[string]any{"kind": "any"}
+		case reflect.String:
+			return map[string]any{"kind": "string"}
+		case reflect.Bool:
+			return map[string]any{"kind": "bool"}
+		case reflect.Int, reflect.Int64, reflect.Int32:
+			return map[string]any{"kind": "int", "bits": t.Bits()}
+		case reflect.Float64, reflect.Float32:
+			return map[string]any{"kind": "float", "bits": t.Bits()}
+		case reflect.Struct:
+			name := t.Name()
+			if _, done := types[name]; !done {
+				types[name] = nil
+				fields := []any{}
+				var collect func(st reflect.Type)
+				collect = func(st reflect.Type) {
+					for i := 0; i < st.NumField(); i++ {
+						f := st.Field(i)
+						tag := f.Tag.Get("json")
+						if f.Anonymous && tag == "" {
+							collect(f.Type)
+							continue
+						}
+						if !f.IsExported() || tag == "-" {
+							continue
+						}
+						jsonName, _, _ := strings.Cut(tag, ",")
+						if jsonName == "" {
+							jsonName = f.Name
+						}
+						fields = append(fields, map[string]any{"name": jsonName, "type": describe(f.Type)})
+					}
+				}
+				collect(t)
+				types[name] = map[string]any{
+					"fields":        fields,
+					"unmarshalJSON": reflect.PointerTo(t).Implements(unmarshaler),
+				}
+			}
+			return map[string]any{"kind": "struct", "name": name}
+		default:
+			return map[string]any{"kind": "unsupported:" + t.Kind().String()}
+		}
+	}
+	root := describe(reflect.TypeOf(uws1.Document{}))
+	return map[string]any{"root": root, "types": types}
+}
+
 // Input lines on stdin: "<kind>\t<path>".
 func main() {
 	// Inputs that make the reference implementation recurse without bound (for example a YAML anchor that
@@ -149,6 +262,11 @@ func main() {
 			}
 		}
 		if kind == "" {
+			continue
+		}
+		if kind == "struct-model" {
+			model, _ := json.Marshal(structModel())
+			_ = out.Encode(verdict{File: path, Kind: kind, Valid: true, Value: model})
 			continue
 		}
 		if kind == "expressions" {

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import sys
 from pathlib import Path
 
 import pytest
@@ -24,3 +25,7 @@ def oracle() -> Oracle:
         if os.environ.get("UWS_REQUIRE_ORACLE") == "1":
             pytest.fail(f"Go oracle is required but unavailable: {exc}")
         pytest.skip(f"Go oracle unavailable: {exc}")
+
+
+# Oracle output and comparison helpers walk values that Go accepts at up to 10000 levels of nesting.
+sys.setrecursionlimit(max(sys.getrecursionlimit(), 50_000))

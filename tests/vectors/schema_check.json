@@ -1,0 +1,7294 @@
+[
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02t03:04:05z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05.123Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05.Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05+05:30"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05-05:30"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T23:59:60Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T23:59:60+00:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T22:59:60-01:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T00:59:60+01:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:60Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-02-30T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-02-29T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2023-02-29T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-13-01T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-00-01T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-00T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-1-02T03:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02 03:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T3:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05+0530"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05+24:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05+23:60"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T+3:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:+4:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:+5Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05+-1:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05++1:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T24:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05.123456789012Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05,1Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "+024-01-02T03:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "10000-01-02T03:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05Zx"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05 Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T\u00e93:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "\uff12\uff10\uff12\uff14-01-02T03:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05.\uff11Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05\u00e9"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "x"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "0000-01-01T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "9999-12-31T23:59:60Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T-0:04:05Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05-00:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2024-01-02T03:04:05.5+00:00"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "1900-02-29T00:00:00Z"
+ },
+ {
+  "schema": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "value": "2000-02-29T00:00:00Z"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://ex%61mple.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://ex%61mple.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://ex%61mple.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://ex%61mple.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://example.com%2F"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://example.com%2F"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://example.com%2F/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://example.com%2F/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://ex%25ample.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://ex%25ample.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://ex%25ample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://ex%25ample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://%C3%A9xample.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://%C3%A9xample.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://%C3%A9xample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://%C3%A9xample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://EXAMPLE.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://EXAMPLE.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://EXAMPLE.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://EXAMPLE.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::ffff:7f00:1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::ffff:7f00:1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::ffff:7f00:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::ffff:7f00:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::ffff:127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::ffff:127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::ffff:127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::ffff:127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[0:0:0:0:0:0:0:1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[0:0:0:0:0:0:0:1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[0:0:0:0:0:0:0:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[0:0:0:0:0:0:0:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[fe80::1%25eth0]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[fe80::1%25eth0]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[fe80::1%25eth0]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[fe80::1%25eth0]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[v1.x]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[v1.x]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[v1.x]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[v1.x]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://127.000.0.1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://127.000.0.1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://127.000.0.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://127.000.0.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://localhost"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://localhost"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://localhost/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://localhost/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://LOCALHOST"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://LOCALHOST"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://LOCALHOST/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://LOCALHOST/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a[::1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a[::1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a[::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a[::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://example.com:"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://example.com:"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://example.com:/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://example.com:/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://example.com:443"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://example.com:443"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://example.com:443/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://example.com:443/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1]:"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1]:"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1]:/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1]:/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://example.com:x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://example.com:x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://example.com:x/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://example.com:x/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1%25lo]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1%25lo]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1%25lo]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1%25lo]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[fe80::1%25%65th0]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[fe80::1%25%65th0]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[fe80::1%25%65th0]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[fe80::1%25%65th0]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::ffff:7f00:1%25x]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::ffff:7f00:1%25x]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::ffff:7f00:1%25x]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::ffff:7f00:1%25x]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[0000::1]:8080"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[0000::1]:8080"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[0000::1]:8080/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[0000::1]:8080/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::FFFF:7F00:0001]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::FFFF:7F00:0001]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::FFFF:7F00:0001]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::FFFF:7F00:0001]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[0:0:0:0:0:ffff:127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[0:0:0:0:0:ffff:127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[0:0:0:0:0:ffff:127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[0:0:0:0:0:ffff:127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://ex%2eample.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://ex%2eample.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://ex%2eample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://ex%2eample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a.example"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a.example"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a.example/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a.example/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://::1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://::1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1::2::3]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1::2::3]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1::2::3]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1::2::3]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[12345::1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[12345::1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[12345::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[12345::1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::ffff:01.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::ffff:01.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::ffff:01.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::ffff:01.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::ffff:1.2.3.4.5]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::ffff:1.2.3.4.5]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::ffff:1.2.3.4.5]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::ffff:1.2.3.4.5]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1:2:3:4:5:6:7:8:9]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1:2:3:4:5:6:7:8:9]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1:2:3:4:5:6:7:8:9]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1:2:3:4:5:6:7:8:9]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1:2:3:4:5:6:7::]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1:2:3:4:5:6:7::]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1:2:3:4:5:6:7::]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1:2:3:4:5:6:7::]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1:2:3:4:5:6:7]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1:2:3:4:5:6:7]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1:2:3:4:5:6:7]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1:2:3:4:5:6:7]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1:2:3:4:5:6:1.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1:2:3:4:5:6:1.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1:2:3:4:5:6:1.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1:2:3:4:5:6:1.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1:2:3:4:5:6:7:1.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1:2:3:4:5:6:7:1.2.3.4]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1:2:3:4:5:6:7:1.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1:2:3:4:5:6:7:1.2.3.4]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[:1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[:1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[1:]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[1:]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[1:]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[1:]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[fe80::1%25]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[fe80::1%25]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[fe80::1%25]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[fe80::1%25]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[fe80::1%25a%20b]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[fe80::1%25a%20b]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[fe80::1%25a%20b]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[fe80::1%25a%20b]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[fe80::1%25a%2fb]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[fe80::1%25a%2fb]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[fe80::1%25a%2fb]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[fe80::1%25a%2fb]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://u@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://u@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://u@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://u@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://u:p@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://u:p@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://u:p@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://u:p@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://u:p@ss@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://u:p@ss@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://u:p@ss@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://u:p@ss@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://u%zz@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://u%zz@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://u%zz@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://u%zz@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://us er@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://us er@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://us er@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://us er@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://\u00fc@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://\u00fc@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://\u00fc@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://\u00fc@h/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://h:80:90"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://h:80:90"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h:80:90/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h:80:90/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://h:-1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://h:-1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h:-1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h:-1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1]x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1]x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1]x/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1]x/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::1]:80x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::1]:80x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1]:80x/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1]:80x/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://x:y@[::1]:9"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://x:y@[::1]:9"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://x:y@[::1]:9/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://x:y@[::1]:9/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://%zz"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://%zz"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://%zz/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://%zz/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a%20b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a%20b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a%20b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a%20b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a<b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a<b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a<b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a<b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a\"b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a\"b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a\"b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a\"b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a{b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a{b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a{b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a{b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a|b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a|b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a|b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a|b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a^b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a^b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a^b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a^b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a`b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a`b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a`b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a`b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://\u00e9xample.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://\u00e9xample.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://\u00e9xample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://\u00e9xample.com/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://127.0.0.1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://127.0.0.1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://127.0.0.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://127.0.0.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://127.1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://127.1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://127.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://127.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://0177.0.0.1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://0177.0.0.1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://0177.0.0.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://0177.0.0.1/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[64:ff9b::127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[64:ff9b::127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[64:ff9b::127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[64:ff9b::127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[::ffff:0:127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[::ffff:0:127.0.0.1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::ffff:0:127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::ffff:0:127.0.0.1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://[0::ffff:7f00:1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://[0::ffff:7f00:1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[0::ffff:7f00:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[0::ffff:7f00:1]/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://host_name"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://host_name"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://host_name/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://host_name/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://a..b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://a..b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a..b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a..b/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://-a"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://-a"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://-a/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://-a/p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "https://"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "https://"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http:///p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http:///p?q#f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "*"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "*"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "/"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "/"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "//"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "//"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "///x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "///x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "//h/p"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "//h/p"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http:"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http:"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http:x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http:x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http:/x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http:/x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "mailto:a@b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "mailto:a@b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "a:b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "a:b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "1a:b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "1a:b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "a1:b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "a1:b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "+a:b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "+a:b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": ":x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": ":x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "a/b:c"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "a/b:c"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "a:b/c"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "a:b/c"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "./a:b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "./a:b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "?x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "?x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "#x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "#x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "#%zz"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "#%zz"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "#%41"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "#%41"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h#%zz"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h#%zz"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h?%zz"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h?%zz"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/%zz"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/%zz"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/%2f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/%2f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/a b"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/a b"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/\\x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/\\x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "\\x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "\\x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/\u007f"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/\u007f"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/\t"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/\t"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h?"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h?"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h??"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h??"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h?a?"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h?a?"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "HTTP://h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "HTTP://h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "h-t.t+p://h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "h-t.t+p://h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "1http://h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "1http://h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/\u00e9"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/\u00e9"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1]/p"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1]/p"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://u@/p"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://u@/p"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://@h"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://@h"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://:80"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://:80"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "file:///etc"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "file:///etc"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "urn:isbn:1"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "urn:isbn:1"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "data:,x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "data:,x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "javascript:alert(1)"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "javascript:alert(1)"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://a b.com"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://a b.com"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://%"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://%"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/%"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/%"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/%4"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/%4"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/%41"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/%41"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h/?%"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h/?%"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h#%"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h#%"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://h#\u00e9"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://h#\u00e9"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "//[::1]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "//[::1]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "//[fe80::1%25en0]/x"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "//[fe80::1%25en0]/x"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[fe80::1%en0]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[fe80::1%en0]"
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": "http://[::1%25%32%35]"
+ },
+ {
+  "schema": {
+   "format": "uri-reference"
+  },
+  "value": "http://[::1%25%32%35]"
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^1\\.\\d+\\.\\d+(-.+)?$"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^1\\.\\d+\\.\\d+(-.+)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "\\S"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "\\S": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[A-Za-z0-9_-]+$"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[A-Za-z0-9_-]+$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^P(?:\\d+Y)?(?:\\d+M)?(?:\\d+W)?(?:\\d+D)?(?:T(?:\\d+H)?(?:\\d+M)?(?:\\d+S)?)?$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^[a-f0-9]{64}$"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^[a-f0-9]{64}$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^(?:/(?:[^~/]|~[01])*)*$"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^(?:/(?:[^~/]|~[01])*)*$": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "1.0.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "1.0.0\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "1.\u0661.0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.\u0661.0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "1.0.0-a\nb"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "1.0.0-a\nb": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": " "
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   " ": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "\u00a0"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u00a0": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "\u000b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u000b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "\u2003"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u2003": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "\t"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\t": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "ab_-"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab_-": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "ab\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "ab\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "P1D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P1D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "P\u0661D"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "P\u0661D": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "PT1H\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "PT1H\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "/a/b"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a/b": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "/a\n"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/a\n": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "/\u00e9"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/\u00e9": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": ""
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "/~2"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~2": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "/~0/~1"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "/~0/~1": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "x-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "x-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "X-a"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "X-a": "s"
+  }
+ },
+ {
+  "schema": {
+   "pattern": "^x-"
+  },
+  "value": "\u0000"
+ },
+ {
+  "schema": {
+   "type": "object",
+   "patternProperties": {
+    "^x-": {
+     "type": "integer"
+    }
+   }
+  },
+  "value": {
+   "\u0000": "s"
+  }
+ },
+ {
+  "schema": {
+   "type": "integer"
+  },
+  "value": 1.0
+ },
+ {
+  "schema": {
+   "type": "integer"
+  },
+  "value": 1.5
+ },
+ {
+  "schema": {
+   "type": "integer"
+  },
+  "value": 1e+300
+ },
+ {
+  "schema": {
+   "type": "integer"
+  },
+  "value": true
+ },
+ {
+  "schema": {
+   "type": "number"
+  },
+  "value": true
+ },
+ {
+  "schema": {
+   "type": "boolean"
+  },
+  "value": 1
+ },
+ {
+  "schema": {
+   "type": "null"
+  },
+  "value": 0
+ },
+ {
+  "schema": {
+   "enum": [
+    1
+   ]
+  },
+  "value": true
+ },
+ {
+  "schema": {
+   "enum": [
+    1
+   ]
+  },
+  "value": 1.0
+ },
+ {
+  "schema": {
+   "enum": [
+    true
+   ]
+  },
+  "value": 1
+ },
+ {
+  "schema": {
+   "const": 0
+  },
+  "value": false
+ },
+ {
+  "schema": {
+   "const": 1
+  },
+  "value": 1.0
+ },
+ {
+  "schema": {
+   "const": {
+    "a": 1
+   }
+  },
+  "value": {
+   "a": 1.0
+  }
+ },
+ {
+  "schema": {
+   "uniqueItems": true
+  },
+  "value": [
+   1,
+   true
+  ]
+ },
+ {
+  "schema": {
+   "uniqueItems": true
+  },
+  "value": [
+   1,
+   1.0
+  ]
+ },
+ {
+  "schema": {
+   "uniqueItems": true
+  },
+  "value": [
+   0,
+   false
+  ]
+ },
+ {
+  "schema": {
+   "uniqueItems": true
+  },
+  "value": [
+   {
+    "a": 1
+   },
+   {
+    "a": 1.0
+   }
+  ]
+ },
+ {
+  "schema": {
+   "multipleOf": 0.1
+  },
+  "value": 0.3
+ },
+ {
+  "schema": {
+   "multipleOf": 0.01
+  },
+  "value": 1.1
+ },
+ {
+  "schema": {
+   "maximum": 9007199254740992
+  },
+  "value": 9007199254740993
+ },
+ {
+  "schema": {
+   "minLength": 2
+  },
+  "value": "\ud83d\ude00"
+ },
+ {
+  "schema": {
+   "maxLength": 1
+  },
+  "value": "\ud83d\ude00"
+ },
+ {
+  "schema": {
+   "maxLength": 1
+  },
+  "value": "\u00e9"
+ },
+ {
+  "schema": {
+   "minimum": 0
+  },
+  "value": -0.0
+ },
+ {
+  "schema": {
+   "exclusiveMinimum": 0
+  },
+  "value": 0
+ },
+ {
+  "schema": {
+   "type": "integer",
+   "minimum": 1
+  },
+  "value": 1.0
+ },
+ {
+  "schema": {
+   "minItems": 1
+  },
+  "value": []
+ },
+ {
+  "schema": {
+   "maxProperties": 1
+  },
+  "value": {
+   "a": 1,
+   "b": 2
+  }
+ },
+ {
+  "schema": {
+   "required": [
+    "constructor"
+   ]
+  },
+  "value": {}
+ },
+ {
+  "schema": {
+   "dependentRequired": {
+    "a": [
+     "b"
+    ]
+   }
+  },
+  "value": {
+   "a": 1
+  }
+ },
+ {
+  "schema": {
+   "propertyNames": {
+    "pattern": "^[a-z]+$"
+   }
+  },
+  "value": {
+   "A": 1
+  }
+ },
+ {
+  "schema": {
+   "format": "uri"
+  },
+  "value": 5
+ },
+ {
+  "schema": {
+   "format": "email"
+  },
+  "value": "x"
+ },
+ {
+  "schema": {
+   "format": "ipv4"
+  },
+  "value": "1.2.3"
+ },
+ {
+  "schema": {
+   "format": "hostname"
+  },
+  "value": "-x"
+ },
+ {
+  "schema": {
+   "format": "regex"
+  },
+  "value": "("
+ },
+ {
+  "schema": {
+   "format": "date"
+  },
+  "value": "2024-02-30"
+ },
+ {
+  "schema": {
+   "format": "duration"
+  },
+  "value": "P"
+ },
+ {
+  "schema": {
+   "format": "uuid"
+  },
+  "value": "x"
+ },
+ {
+  "schema": {
+   "format": "unknown"
+  },
+  "value": "x"
+ }
+]
