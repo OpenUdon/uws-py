@@ -106,8 +106,32 @@ def _short_tag(node: Any, depth: int = 0) -> str:
     return goyaml.resolve("", node.value)[0]
 
 
+def _kind(node: Any) -> str:
+    return "alias" if isinstance(node, _Alias) else type(node).__name__
+
+
+def _text(node: Any) -> str:
+    """The key text yaml.v3 compares (``Node.Value``); an alias key decodes to its target scalar."""
+    if isinstance(node, _Alias):
+        target = node.target
+        return target.value if isinstance(target, ScalarNode) else ""
+    return node.value if isinstance(node, ScalarNode) else ""
+
+
+def _is_merge_any(node: Any) -> bool:
+    """yaml.v3 ``isMerge``: the plain scalar ``<<`` (quoted scalars carry !!str) or an explicit ``!!merge``."""
+    if not isinstance(node, ScalarNode) or node.value != "<<":
+        return False
+    tag = _explicit_tag(node)
+    return tag == goyaml.MERGE_TAG or (tag == "" and node.style is None)
+
+
 class _Converter:
-    def __init__(self) -> None:
+    """``mode="node"``: ``convert.yamlNodeToJSONCompatible`` (core documents). ``mode="any"``: yaml.v3 decoding into
+    ``any`` followed by ``json.Marshal`` (profile documents, ``schemas.decodeSingleJSONOrYAMLDocument``)."""
+
+    def __init__(self, mode: str = "node") -> None:
+        self.mode = mode
         self.active: set[int] = set()
         self.decode_count = 0
         self.alias_count = 0
@@ -143,6 +167,8 @@ class _Converter:
         return self._scalar(node, path)
 
     def _mapping(self, node: MappingNode, path: str) -> dict[str, JsonValue]:
+        if self.mode == "any":
+            return self._any_mapping(node, path)
         result: dict[str, JsonValue] = {}
         merge: Any = None
         for key_node, value_node in node.value:
@@ -160,6 +186,31 @@ class _Converter:
             key = key_node.value
             if key in result:
                 raise DecodeError(f"invalid YAML: {path}: YAML mapping key {key!r} is defined more than once")
+            result[key] = self.convert(value_node, f"{path}.{key}")
+        if merge is not None:
+            for mapping in self._merge(merge, f"{path}.<<"):
+                for key, value in mapping.items():
+                    if key not in result:
+                        result[key] = value
+        return result
+
+    def _any_mapping(self, node: MappingNode, path: str) -> dict[str, JsonValue]:
+        pairs = node.value
+        # yaml.v3 uniqueKeys: two keys of the same node kind with the same text.
+        for i, (ki, _) in enumerate(pairs):
+            for kj, _ in pairs[i + 1 :]:
+                if _kind(ki) == _kind(kj) and _text(ki) == _text(kj):
+                    raise DecodeError(f"invalid YAML: {path}: mapping key {_text(kj)!r} already defined")
+        result: dict[str, JsonValue] = {}
+        merge: Any = None
+        for key_node, value_node in pairs:
+            if _is_merge_any(key_node):
+                merge = value_node
+                continue
+            if _short_tag(key_node) != goyaml.STR_TAG:
+                # A non-string key makes a map[interface{}]interface{}, which json.Marshal refuses.
+                raise DecodeError(f"invalid YAML: {path}: json: unsupported type: map[interface {{}}]interface {{}}")
+            key = _text(key_node)
             result[key] = self.convert(value_node, f"{path}.{key}")
         if merge is not None:
             for mapping in self._merge(merge, f"{path}.<<"):
@@ -191,7 +242,7 @@ class _Converter:
         tag = _short_tag(node)
         text: str = node.value
         stored = _explicit_tag(node) or goyaml.resolve("", text)[0]
-        if tag in (goyaml.INT_TAG, goyaml.FLOAT_TAG) and _JSON_NUMBER.fullmatch(text):
+        if self.mode == "node" and tag in (goyaml.INT_TAG, goyaml.FLOAT_TAG) and _JSON_NUMBER.fullmatch(text):
             # Go keeps the number text here, but the schema layer re-reads the YAML with yaml.v3, whose
             # resolver must also accept the scalar (``!!int 1.5`` is refused there).
             try:
@@ -211,6 +262,8 @@ class _Converter:
             raise DecodeError(f"invalid YAML: {path}: {exc}") from exc
         if isinstance(out, goyaml.GoFloat):
             raise DecodeError(f"invalid YAML: {path}: json: unsupported value: {out.value}")
+        if self.mode == "any" and isinstance(out, goyaml.YamlTimestamp):
+            return str(out)  # time.Time re-marshalled as RFC 3339 text
         return out
 
 
@@ -244,5 +297,36 @@ def parse_strict_yaml(text: str | bytes) -> JsonValue:
             return _Converter().convert(root, "document")
         except RecursionError as exc:
             raise DecodeError("invalid YAML: nesting is too deep") from exc
+    finally:
+        loader.dispose()
+
+
+def parse_profile_yaml(data: str | bytes) -> JsonValue:
+    """Decodes a profile document as upstream ``schemas.decodeSingleJSONOrYAMLDocument`` does: exactly one YAML (or
+    JSON) document decoded by yaml.v3 into ``any`` and re-encoded with ``json.Marshal``."""
+    try:
+        loader = _Loader(data)
+    except pyyaml.YAMLError as exc:
+        raise DecodeError(f"invalid YAML: {exc}") from exc
+    try:
+        try:
+            root = loader.get_node() if loader.check_node() else None
+            if root is not None and loader.check_node():
+                raise DecodeError("multiple YAML documents are not supported")
+        except pyyaml.YAMLError as exc:
+            raise DecodeError(f"invalid YAML: {exc}") from exc
+        except RecursionError as exc:
+            raise DecodeError("invalid YAML: nesting is too deep") from exc
+        if loader.yaml_version is not None and loader.yaml_version != (1, 1):
+            raise DecodeError("invalid YAML: found incompatible YAML document")
+        if root is None:
+            raise DecodeError("document is empty")
+        try:
+            value = _Converter("any").convert(root, "document")
+        except RecursionError as exc:
+            raise DecodeError("invalid YAML: nesting is too deep") from exc
+        if value is None:
+            raise DecodeError("document is empty")
+        return value
     finally:
         loader.dispose()

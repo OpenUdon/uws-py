@@ -27,3 +27,34 @@ def go_atoi(s: str) -> int | None:
         return None
     value = int(s)
     return value if _INT64_MIN <= value <= _INT64_MAX else None
+
+
+def _simple_lower(c: str) -> str:
+    if "\udc80" <= c <= "\udcff":  # an invalid UTF-8 byte (surrogateescape): strings.Map writes U+FFFD
+        return "�"
+    lower = c.lower()
+    if len(lower) == 1:
+        return lower
+    return "i" if c == "İ" else c
+
+
+def go_to_lower(s: str) -> str:
+    """``strings.ToLower``: per-rune simple lowercase mapping (no final-sigma context, ``İ`` -> ``i``)."""
+    if s.isascii():
+        return s.lower()
+    return "".join(_simple_lower(c) for c in s)
+
+
+def _fold(c: str) -> str:
+    folded = c.casefold()
+    if len(folded) == 1:
+        return folded
+    lower = c.lower()
+    return lower if len(lower) == 1 else c
+
+
+def go_equal_fold(a: str, b: str) -> bool:
+    """``strings.EqualFold``: simple Unicode case folding rune by rune (``ß`` does not match ``ss``)."""
+    if len(a) != len(b):
+        return False
+    return all(x == y or _fold(x) == _fold(y) for x, y in zip(a, b, strict=True))

@@ -12,6 +12,7 @@ import binascii
 import math
 import re
 from dataclasses import dataclass
+from decimal import Decimal
 from typing import Any
 
 NULL_TAG = "!!null"
@@ -124,7 +125,8 @@ def _float_value(value: float) -> Any:
     if math.isnan(value) or math.isinf(value):
         return GoFloat(value)
     if value.is_integer() and abs(value) < 1e21:
-        return int(value)
+        # Go writes the shortest round-trip digits ('f' format), e.g. 18446744073709552000 for 2**64.
+        return int(Decimal(repr(value)))
     return value
 
 

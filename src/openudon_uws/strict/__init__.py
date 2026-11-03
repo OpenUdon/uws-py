@@ -6,7 +6,7 @@ from typing import Literal
 
 from ..diagnostics import DecodeError
 from .json import JsonValue, decode_utf8, parse_strict_json
-from .yaml import parse_strict_yaml
+from .yaml import parse_profile_yaml, parse_strict_yaml
 
 __all__ = [
     "DEFAULT_MAX_BYTES",
@@ -15,6 +15,7 @@ __all__ = [
     "decode_document",
     "decode_utf8",
     "format_for_path",
+    "parse_profile_yaml",
     "parse_strict_json",
     "parse_strict_yaml",
 ]

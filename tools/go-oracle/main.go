@@ -7,6 +7,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net"
 	"net/url"
 	"os"
@@ -94,6 +95,45 @@ func check(kind, path string) verdict {
 				"loopback": net.ParseIP(u.Hostname()).IsLoopback(),
 			})
 			v.Value = out
+			return err
+		})
+	case "profile-decode":
+		// A copy of upstream schemas.decodeSingleJSONOrYAMLDocument (unexported): one yaml.v3 document decoded
+		// into any, refused if a second document follows, then json.Marshal.
+		err = withData(path, func(data []byte) error {
+			if len(bytes.TrimSpace(data)) == 0 {
+				return fmt.Errorf("document is empty")
+			}
+			decoder := yaml.NewDecoder(bytes.NewReader(data))
+			var value any
+			if err := decoder.Decode(&value); err != nil {
+				return err
+			}
+			var extra any
+			if err := decoder.Decode(&extra); err != io.EOF {
+				if err == nil {
+					return fmt.Errorf("multiple YAML documents are not supported")
+				}
+				return err
+			}
+			if value == nil {
+				return fmt.Errorf("document is empty")
+			}
+			out, err := json.Marshal(value)
+			v.Value = out
+			return err
+		})
+	case "request-digest":
+		// mockruntime.RequestDigest of the request decoded as Go any; Value is the digest string.
+		err = withData(path, func(data []byte) error {
+			var request any
+			if err := json.Unmarshal(data, &request); err != nil {
+				return err
+			}
+			digest, err := mockruntime.RequestDigest(request)
+			if err == nil {
+				v.Value, _ = json.Marshal(digest)
+			}
 			return err
 		})
 	case "yaml-any":

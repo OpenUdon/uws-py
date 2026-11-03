@@ -11,7 +11,7 @@ from typing import Any
 import pytest
 
 from openudon_uws.diagnostics import DecodeError
-from openudon_uws.strict import parse_strict_json, parse_strict_yaml
+from openudon_uws.strict import parse_profile_yaml, parse_strict_json, parse_strict_yaml
 from tests.oracle import Oracle
 
 VECTORS = Path(__file__).parent / "vectors"
@@ -106,3 +106,28 @@ def test_json_rejections(text: str) -> None:
 
 def test_json_float_is_finite() -> None:
     assert not math.isinf(parse_strict_json("1.7976931348623157e308"))
+
+
+def test_profile_yaml_decoding_matches_go(oracle: Oracle, tmp_path: Path) -> None:
+    """Profile documents: yaml.v3 into ``any``, single document, then ``json.Marshal`` (exact values)."""
+    cases: list[str] = json.loads((VECTORS / "yaml_decode.json").read_text())
+    cases += ["a: 1\n---", "a: 1\n...\n", "---\na: 1\n...\n---\nb: 2", "{}", "[]", "~", " \n", "'<<': {x: 1}", "a: 1.0"]
+    files = []
+    for i, text in enumerate(cases):
+        f = tmp_path / f"profile-{i:04d}.yaml"
+        f.write_bytes(text.encode("utf-8", errors="surrogatepass"))
+        files.append(f)
+    go = oracle.run("profile-decode", files)
+    mismatches = []
+    for text, f in zip(cases, files, strict=True):
+        expected = go[str(f)]
+        try:
+            actual: Any = parse_profile_yaml(f.read_bytes())
+            ok, err = True, ""
+        except DecodeError as exc:
+            actual, ok, err = None, False, str(exc)
+        if ok != expected.valid:
+            mismatches.append(f"{text!r}: go={expected.valid} ({expected.error}) py={ok} ({err}) value={actual!r}")
+        elif ok and typed(json.loads(json.dumps(actual))) != typed(json.loads(json.dumps(expected.value))):
+            mismatches.append(f"{text!r}: go value {expected.value!r} != py value {actual!r}")
+    assert not mismatches, f"{len(mismatches)} of {len(cases)} mismatches:\n" + "\n".join(mismatches)

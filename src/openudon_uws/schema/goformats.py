@@ -223,6 +223,8 @@ class GoURL:
     raw_query: str
     force_query: bool
     fragment: str
+    raw_path: str = ""
+    """The path text as written (Go keeps it as ``RawPath`` when it differs from the default escaping)."""
 
     @property
     def is_abs(self) -> bool:
@@ -321,7 +323,7 @@ def parse_url(raw_url: str) -> GoURL | None:
         fragment = _s(_unescape(frag, "fragment")) if has_frag and frag else ""
     except _URLError:
         return None
-    return GoURL(u.scheme, u.opaque, u.user, u.host, u.path, u.raw_query, u.force_query, fragment)
+    return GoURL(u.scheme, u.opaque, u.user, u.host, u.path, u.raw_query, u.force_query, fragment, u.raw_path)
 
 
 def _parse(raw: bytes) -> GoURL:
@@ -353,7 +355,63 @@ def _parse(raw: bytes) -> GoURL:
             authority, rest = authority[:slash], authority[slash:]
         user, host = _parse_authority(authority)
     path = _unescape(rest, "path")
-    return GoURL(scheme, "", None if user is None else _s(user), _s(host), _s(path), _s(raw_query), force_query, "")
+    return GoURL(
+        scheme, "", None if user is None else _s(user), _s(host), _s(path), _s(raw_query), force_query, "", _s(rest)
+    )
+
+
+def _should_escape(c: int, mode: str) -> bool:
+    """Go ``shouldEscape`` for ``encodePath`` and ``encodeUserPassword``."""
+    if c in _ALNUM or c in _UNRESERVED_MARK:
+        return False
+    if c in b"$&+,/:;=?@":
+        return c == 0x3F if mode == "path" else c in b"@/?:"
+    return True
+
+
+def _escape(s: bytes, mode: str) -> bytes:
+    out = bytearray()
+    for c in s:
+        if _should_escape(c, mode):
+            out += b"%" + f"{c:02X}".encode()
+        else:
+            out.append(c)
+    return bytes(out)
+
+
+def _valid_encoded(s: bytes) -> bool:
+    for c in s:
+        if c in b"!$&'()*+,;=:@[]%":
+            continue
+        if _should_escape(c, "path"):
+            return False
+    return True
+
+
+def escaped_path(u: GoURL) -> str:
+    """Go ``(*URL).EscapedPath``."""
+    raw = _b(u.raw_path)
+    path = _b(u.path)
+    if raw and _escape(path, "path") != raw and _valid_encoded(raw):
+        try:
+            if _unescape(raw, "path") == path:
+                return u.raw_path
+        except _URLError:
+            pass
+    if u.path == "*":
+        return "*"
+    return _s(_escape(path, "path"))
+
+
+def user_string(u: GoURL) -> str:
+    """Go ``(*Userinfo).String`` (username and password re-escaped), or ``""`` without userinfo."""
+    if u.user is None:
+        return ""
+    raw = _b(u.user)
+    if b":" in raw:
+        name, _, password = raw.partition(b":")
+        return _s(_escape(_unescape(name, "user"), "user") + b":" + _escape(_unescape(password, "user"), "user"))
+    return _s(_escape(_unescape(raw, "user"), "user"))
 
 
 # --- santhosh-tekuri/jsonschema/v6 formats ------------------------------------------------------------------------
