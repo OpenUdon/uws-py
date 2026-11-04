@@ -118,6 +118,12 @@ def _text(node: Any) -> str:
     return node.value if isinstance(node, ScalarNode) else ""
 
 
+def _check_key_escapes(node: Any, path: str) -> None:
+    """yaml.v3's scanner refuses surrogate escapes anywhere, keys included."""
+    if _LONE_SURROGATE.search(_text(node)):
+        raise DecodeError(f"invalid YAML: {path}: found invalid Unicode character escape code")
+
+
 def _is_merge_any(node: Any) -> bool:
     """yaml.v3 ``isMerge``: the plain scalar ``<<`` (quoted scalars carry !!str) or an explicit ``!!merge``."""
     if not isinstance(node, ScalarNode) or node.value != "<<":
@@ -183,6 +189,7 @@ class _Converter:
                     f"invalid YAML: {path}: YAML mapping key {value!r} has tag {_short_tag(key_node)!r}; "
                     "only string keys are supported"
                 )
+            _check_key_escapes(key_node, path)
             key = key_node.value
             if key in result:
                 raise DecodeError(f"invalid YAML: {path}: YAML mapping key {key!r} is defined more than once")
@@ -196,11 +203,14 @@ class _Converter:
 
     def _any_mapping(self, node: MappingNode, path: str) -> dict[str, JsonValue]:
         pairs = node.value
-        # yaml.v3 uniqueKeys: two keys of the same node kind with the same text.
-        for i, (ki, _) in enumerate(pairs):
-            for kj, _ in pairs[i + 1 :]:
-                if _kind(ki) == _kind(kj) and _text(ki) == _text(kj):
-                    raise DecodeError(f"invalid YAML: {path}: mapping key {_text(kj)!r} already defined")
+        # yaml.v3 uniqueKeys: two keys of the same node kind with the same text (indexed, not pairwise).
+        seen: set[tuple[str, str]] = set()
+        for key_node, _ in pairs:
+            _check_key_escapes(key_node, path)
+            ident = (_kind(key_node), _text(key_node))
+            if ident in seen:
+                raise DecodeError(f"invalid YAML: {path}: mapping key {ident[1]!r} already defined")
+            seen.add(ident)
         result: dict[str, JsonValue] = {}
         merge: Any = None
         for key_node, value_node in pairs:
@@ -220,23 +230,29 @@ class _Converter:
         return result
 
     def _merge(self, node: Any, path: str) -> list[dict[str, JsonValue]]:
-        if isinstance(node, _Alias):
-            key = id(node.target)
-            if key in self.active:
-                raise DecodeError(f"invalid YAML: {path}: anchor value contains itself")
-            self.active.add(key)
-            try:
-                return self._merge(node.target, path)
-            finally:
-                self.active.discard(key)
+        """The value of a ``<<`` key, with yaml.v3's decoder rule (upstream re-reads every YAML document with it):
+        a mapping, an alias to a mapping, or a sequence of mappings and aliases to mappings."""
         if isinstance(node, SequenceNode):
-            out: list[dict[str, JsonValue]] = []
-            for i, item in enumerate(node.value):
-                out.extend(self._merge(item, f"{path}[{i}]"))
-            return out
-        if not isinstance(node, MappingNode):
-            raise DecodeError(f"invalid YAML: {path}: YAML map merge requires a map or sequence of maps")
-        return [self._mapping(node, path)]
+            items = [(item, f"{path}[{i}]") for i, item in enumerate(node.value)]
+        else:
+            items = [(node, path)]
+        out: list[dict[str, JsonValue]] = []
+        for item, item_path in items:
+            target = item.target if isinstance(item, _Alias) else item
+            if not isinstance(target, MappingNode):
+                raise DecodeError(f"invalid YAML: {item_path}: map merge requires map or sequence of maps as the value")
+            if isinstance(item, _Alias):
+                key = id(target)
+                if key in self.active:
+                    raise DecodeError(f"invalid YAML: {item_path}: anchor value contains itself")
+                self.active.add(key)
+                try:
+                    out.append(self._mapping(target, item_path))
+                finally:
+                    self.active.discard(key)
+            else:
+                out.append(self._mapping(target, item_path))
+        return out
 
     def _scalar(self, node: ScalarNode, path: str) -> JsonValue:
         tag = _short_tag(node)

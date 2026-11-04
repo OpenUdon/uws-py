@@ -91,3 +91,39 @@ def test_format_for_path() -> None:
     assert format_for_path("x.yml") == "yaml"
     with pytest.raises(DecodeError):
         format_for_path("x.hcl")
+
+
+def test_auto_falls_back_to_yaml_only_for_malformed_json() -> None:
+    assert decode_document("{uws: 1.13.0}") == {"uws": "1.13.0"}
+    with pytest.raises(DecodeError, match="out of range"):
+        decode_document('{"a": 1e400}')
+    with pytest.raises(DecodeError, match="duplicate"):
+        decode_document('{"a": 1, "a": 2}', reject_duplicate_keys=True)
+
+
+def test_invalid_utf8_bytes_each_become_a_replacement_character() -> None:
+    assert decode_document(b'{"a":"x\xe2\x82y"}', format="json") == {"a": "x\ufffd\ufffdy"}
+
+
+@pytest.mark.parametrize(
+    "text",
+    ["base: &b [{x: 1}]\nd:\n  <<: *b", "d:\n  <<: [[{x: 1}]]", '"\\ud800": 1', '"\\ud83d\\ude00": 1'],
+)
+def test_yaml_forms_go_refuses(text: str) -> None:
+    from openudon_uws.strict import parse_profile_yaml
+
+    with pytest.raises(DecodeError):
+        parse_strict_yaml(text)
+    with pytest.raises(DecodeError):
+        parse_profile_yaml(text)
+
+
+def test_many_keys_decode_in_linear_time() -> None:
+    import time
+
+    from openudon_uws.strict import parse_profile_yaml
+
+    text = "\n".join(f"k{i}: {i}" for i in range(20000))
+    start = time.perf_counter()
+    assert len(parse_profile_yaml(text)) == 20000
+    assert time.perf_counter() - start < 10

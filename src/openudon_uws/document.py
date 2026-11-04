@@ -36,7 +36,7 @@ def validate_document(
         except DecodeError as exc:
             return ValidationResult(False, [Diagnostic("", str(exc), "decode")])
         return _validate(value)
-    return _validate(data)
+    return validate_decoded_document(data)
 
 
 def validate_document_file(path: str | os.PathLike[str], *, max_bytes: int = DEFAULT_MAX_BYTES) -> ValidationResult:
@@ -52,8 +52,66 @@ def validate_document_file(path: str | os.PathLike[str], *, max_bytes: int = DEF
 
 
 def validate_decoded_document(value: JsonValue) -> ValidationResult:
-    """Validates an already-decoded document value."""
-    return _validate(value)
+    """Validates an already-decoded document value.
+
+    The value must be JSON-shaped: ``dict`` with ``str`` keys, ``list``, ``str``, ``bool``, ``None``, ``int`` or a
+    finite ``float``; anything else is reported as a decode problem.
+    """
+    try:
+        plain = _plain_json(value)
+    except _ShapeError as exc:
+        return ValidationResult(False, [Diagnostic(exc.path, exc.message, "decode")])
+    return _validate(plain)
+
+
+class _ShapeError(Exception):
+    def __init__(self, path: str, message: str) -> None:
+        super().__init__(message)
+        self.path = path
+        self.message = message
+
+
+def _plain_json(value: Any) -> Any:
+    """Copies a decoded value into plain JSON types (subclasses such as OrderedDict or str enums become dict/str;
+    YAML timestamp markers are kept), refusing anything without a JSON form. Iterative: values may nest deeply."""
+
+    def leaf(item: Any, path: str) -> Any:
+        if item is None or type(item) in (str, bool, int, YamlTimestamp):
+            return item
+        if isinstance(item, bool):
+            return bool(item)
+        if isinstance(item, str):
+            return str(item)
+        if isinstance(item, int):
+            return int(item)
+        if isinstance(item, float):
+            f = float(item)
+            if f != f or f in (float("inf"), float("-inf")):
+                raise _ShapeError(path, f"number {f!r} has no JSON representation")
+            return f
+        raise _ShapeError(path, f"value of type {type(item).__name__} is not a JSON value")
+
+    if not isinstance(value, (dict, list)):
+        return leaf(value, "")
+    root: Any = {} if isinstance(value, dict) else []
+    stack: list[tuple[Any, Any, str]] = [(value, root, "")]
+    while stack:
+        source, target, path = stack.pop()
+        entries = source.items() if isinstance(source, dict) else enumerate(source)
+        for key, child in entries:
+            if isinstance(source, dict) and not isinstance(key, str):
+                raise _ShapeError(path, f"object key {key!r} is not a string")
+            child_path = (f"{path}.{key}" if path else str(key)) if isinstance(source, dict) else f"{path}[{key}]"
+            if isinstance(child, (dict, list)):
+                copy: Any = {} if isinstance(child, dict) else []
+                stack.append((child, copy, child_path))
+            else:
+                copy = leaf(child, child_path)
+            if isinstance(target, dict):
+                target[str(key)] = copy
+            else:
+                target.append(copy)
+    return root
 
 
 def _split_timestamps(value: Any) -> tuple[Any, Any, bool]:

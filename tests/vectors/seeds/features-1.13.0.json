@@ -1,0 +1,227 @@
+{
+ "uws": "1.13.0",
+ "info": {
+  "title": "Feature coverage seed",
+  "version": "1"
+ },
+ "sourceDescriptions": [
+  {
+   "name": "api",
+   "url": "https://a.example/openapi.json",
+   "type": "openapi"
+  },
+  {
+   "name": "gql",
+   "url": "https://a.example/graphql",
+   "type": "graphql"
+  }
+ ],
+ "variables": {
+  "v1": "x"
+ },
+ "operations": [
+  {
+   "operationId": "op1",
+   "sourceDescription": "api",
+   "openapiOperationId": "list",
+   "effect": "read",
+   "parallelGroup": "grp",
+   "timeout": 5,
+   "outputs": {
+    "o1": "$response.body"
+   },
+   "onFailure": [
+    {
+     "name": "r",
+     "type": "retry",
+     "retryLimit": 2,
+     "retryAfter": 1
+    }
+   ],
+   "onSuccess": [
+    {
+     "name": "g",
+     "type": "goto",
+     "stepId": "s1"
+    }
+   ]
+  },
+  {
+   "operationId": "op2",
+   "sourceDescription": "gql",
+   "sourceOperationId": "Query.x",
+   "dependsOn": [
+    "grp"
+   ],
+   "successCriteria": [
+    {
+     "condition": "$response.statusCode == 200",
+     "type": "simple"
+    }
+   ]
+  },
+  {
+   "operationId": "op3",
+   "x-uws-operation-profile": "uws.runtime.1.0",
+   "x-uws-runtime": {
+    "type": "fnct",
+    "function": "f"
+   }
+  }
+ ],
+ "workflows": [
+  {
+   "workflowId": "main",
+   "type": "sequence",
+   "inputs": {
+    "type": "object",
+    "properties": {
+     "a": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "a"
+    ]
+   },
+   "idempotency": {
+    "key": "$inputs.a",
+    "onConflict": "reject",
+    "ttl": 60
+   },
+   "steps": [
+    {
+     "stepId": "s1",
+     "operationRef": "op1"
+    },
+    {
+     "stepId": "sw",
+     "type": "switch",
+     "cases": [
+      {
+       "name": "c1",
+       "when": "$inputs.a == \"x\"",
+       "steps": [
+        {
+         "stepId": "s2",
+         "operationRef": "op2"
+        }
+       ]
+      }
+     ],
+     "default": [
+      {
+       "stepId": "s3",
+       "operationRef": "op3"
+      }
+     ]
+    },
+    {
+     "stepId": "lp",
+     "type": "loop",
+     "items": "$inputs.a",
+     "steps": [
+      {
+       "stepId": "s4",
+       "operationRef": "op2"
+      }
+     ]
+    },
+    {
+     "stepId": "aw",
+     "type": "await",
+     "wait": "$inputs.a"
+    },
+    {
+     "stepId": "mg",
+     "type": "merge",
+     "dependsOn": [
+      "s1"
+     ]
+    },
+    {
+     "stepId": "sub",
+     "workflow": "child"
+    }
+   ]
+  },
+  {
+   "workflowId": "child",
+   "type": "parallel",
+   "steps": [
+    {
+     "stepId": "c1s",
+     "operationRef": "op3"
+    }
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "triggerId": "t1",
+   "path": "/hook",
+   "methods": [
+    "POST"
+   ],
+   "outputs": [
+    "ok",
+    "err"
+   ],
+   "routes": [
+    {
+     "output": "ok",
+     "to": [
+      "s1"
+     ]
+    },
+    {
+     "output": "1",
+     "to": [
+      "child"
+     ]
+    }
+   ]
+  }
+ ],
+ "results": [
+  {
+   "name": "r1",
+   "kind": "switch",
+   "from": "main.sw",
+   "value": "$steps.s2.outputs.o1"
+  },
+  {
+   "name": "r2",
+   "kind": "loop",
+   "from": "main.lp"
+  }
+ ],
+ "components": {
+  "variables": {
+   "cv": "y"
+  }
+ },
+ "contentTrust": {
+  "sourceDescriptions": {
+   "api": "trusted"
+  },
+  "operations": {
+   "op1": {
+    "default": "untrusted",
+    "outputs": {
+     "o1": "trusted"
+    }
+   }
+  },
+  "triggers": {
+   "t1": "untrusted"
+  },
+  "workflows": {
+   "main": {
+    "inputs": {
+     "a": "trusted"
+    }
+   }
+  }
+ }
+}

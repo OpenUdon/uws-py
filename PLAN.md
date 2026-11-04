@@ -152,5 +152,8 @@ Oracle harness, with the lessons from the TS review:
   - Expressions: 8,000 cases, compared by verdict and error kind.
   - Profiles: about 12,000 mutations.
   - Request digests.
+- Second deep review (2026-11-04) remediated: yaml.v3 merge rules and key escapes, linear duplicate-key
+  detection for profiles, auto mode falls back to YAML only for malformed JSON, Go's per-byte UTF-8 replacement,
+  JSON-shape checks for decoded input, and a feature-rich seed plus browser-version fan-out in the G6 corpora.
 - Open: stable diagnostic codes (messages are not a stable API yet, as in uws-ts) and publishing to PyPI, which
   needs approval.

@@ -15,6 +15,7 @@ import yaml
 
 from openudon_uws.diagnostics import ValidationResult
 from openudon_uws.profiles import (
+    BROWSER_PROFILES,
     canonicalize_request,
     request_digest,
     validate_browser_authentication_call,
@@ -134,8 +135,14 @@ def _seeds(directory: str) -> list[Any]:
 
 
 def test_browser_profiles_match_go(oracle: Oracle, tmp_path: Path) -> None:
-    _differential(oracle, tmp_path, "browser-profile", validate_browser_profile, _seeds("browser-profile"),
-                  COUNT, 11, True)  # fmt: skip
+    # Every seed under every browser version, so each version's rules (1.8 templates included) reach the oracle.
+    seeds = []
+    for seed in _seeds("browser-profile"):
+        for profile in BROWSER_PROFILES:
+            fanned = copy.deepcopy(seed)
+            fanned["profile"] = profile
+            seeds.append(fanned)
+    _differential(oracle, tmp_path, "browser-profile", validate_browser_profile, seeds, COUNT * 2, 11, True)
 
 
 def test_browser_authentication_profiles_match_go(oracle: Oracle, tmp_path: Path) -> None:
@@ -198,3 +205,20 @@ def test_request_digests_match_go(oracle: Oracle, tmp_path: Path) -> None:
         if actual != want:
             mismatches.append(f"{text[:80]!r}: go={want} ({expected.error[:100]}) py={actual}")
     assert not mismatches, "\n".join(mismatches)
+
+
+@pytest.mark.parametrize(
+    ("validator", "document"),
+    [
+        (validate_browser_profile, {"profile": "uws.browser.1.10", "unexpected": True}),
+        (validate_browser_authentication_profile, {"profile": "uws.browser-authentication.1.1", "unexpected": True}),
+        (validate_browser_authentication_call, {"x-uws-browser-authentication": {"unexpected": True}}),
+        (validate_runtime_supplement, {"x-uws-runtime": {"type": "http"}}),
+        (validate_mock_fixtures, {"format": "uws.mock-fixtures.1.0", "fixtures": "nope"}),
+    ],
+)
+def test_schema_failures_are_reported(validator: Callable[[str], ValidationResult], document: Any) -> None:
+    """A schema failure must never be mistaken for success (ValidationResult is falsy when invalid)."""
+    result = validator(json.dumps(document))
+    assert result.valid is False
+    assert result.diagnostics

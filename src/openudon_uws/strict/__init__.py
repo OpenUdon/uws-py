@@ -5,12 +5,13 @@ from __future__ import annotations
 from typing import Literal
 
 from ..diagnostics import DecodeError
-from .json import JsonValue, decode_utf8, parse_strict_json
+from .json import JsonSyntaxError, JsonValue, decode_utf8, parse_strict_json
 from .yaml import parse_profile_yaml, parse_strict_yaml
 
 __all__ = [
     "DEFAULT_MAX_BYTES",
     "InputFormat",
+    "JsonSyntaxError",
     "JsonValue",
     "decode_document",
     "decode_utf8",
@@ -60,7 +61,9 @@ def decode_document(
         return parse_strict_yaml(data)
     try:
         return parse_strict_json(text, reject_duplicates=reject_duplicate_keys)
-    except DecodeError as json_error:
+    except JsonSyntaxError as json_error:
+        # Only malformed JSON falls back to YAML (for example a YAML flow mapping such as {uws: 1.13.0}).
+        # Well-formed JSON that Go refuses (number range, duplicates in strict mode, depth) stays refused.
         try:
             return parse_strict_yaml(data)
         except DecodeError:

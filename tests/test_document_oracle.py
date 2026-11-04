@@ -16,6 +16,7 @@ from tests.mutations import mutate
 from tests.oracle import Oracle
 
 VENDOR = Path(__file__).resolve().parent.parent / "vendor" / "testdata"
+SEEDS = Path(__file__).resolve().parent / "vectors" / "seeds"
 MUTATIONS = int(os.environ.get("UWS_MUTATIONS", "1500"))
 SEED = int(os.environ.get("UWS_SEED", "20261103"))
 
@@ -26,6 +27,16 @@ def seed_documents() -> list[Any]:
     for name in ("1.10.0.json", "1.11.0.json"):
         corpus = json.loads((VENDOR / "conformance" / name).read_text())
         seeds += [c["input"]["document"] for c in corpus["cases"] if "document" in c["input"]]
+    # Feature-rich seeds (contentTrust, idempotency, components, switch/loop/await/merge, generic sources,
+    # parallel groups, triggers and results) at the latest version and at older versions whose gates refuse some
+    # of those features, so every semantic path and version gate reaches the oracle.
+    for path in sorted(SEEDS.glob("*.json")):
+        doc = json.loads(path.read_text())
+        seeds.append(doc)
+        for version in ("1.12.0", "1.11.0", "1.10.0", "1.9.2"):
+            older = json.loads(json.dumps(doc))
+            older["uws"] = version
+            seeds.append(older)
     return seeds
 
 

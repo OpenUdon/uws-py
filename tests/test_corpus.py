@@ -60,3 +60,10 @@ def test_conformance_1_10_validation_area() -> None:
     # The other 1.10.0 areas (expressions truthiness, structural, execution, criteria, actions, triggers) are
     # runtime behavior, out of scope; they are counted here, never silently passed.
     assert sum(1 for c in corpus["cases"] if c.get("area") != "validation") == 10
+
+
+def test_feature_seed_is_valid_at_1_13() -> None:
+    """The differential's feature-rich seed must itself be accepted, so its mutations reach the semantic layer."""
+    seed = Path(__file__).resolve().parent / "vectors" / "seeds" / "features-1.13.0.json"
+    result = validate_document_file(seed)
+    assert result.valid, result.diagnostics

@@ -8,6 +8,7 @@ float64 wherever they are decoded into Go numbers.
 
 from __future__ import annotations
 
+import codecs
 import json
 import math
 import re
@@ -24,13 +25,29 @@ _LONE_SURROGATE = re.compile("[\ud800-\udfff]")
 _REPLACEMENT = "\ufffd"
 
 
+class JsonSyntaxError(DecodeError):
+    """The input is not well-formed JSON (as opposed to well-formed JSON that Go refuses: number range, duplicate
+    members in strict mode, a byte order mark, nesting depth)."""
+
+
+def _go_replace(exc: UnicodeError) -> tuple[str, int]:
+    # Go decodes rune by rune: every byte of an invalid sequence becomes its own U+FFFD, where Python's "replace"
+    # writes one U+FFFD per maximal invalid subpart.
+    if not isinstance(exc, UnicodeDecodeError):
+        raise exc
+    return "\ufffd" * (exc.end - exc.start), exc.end
+
+
+codecs.register_error("openudon-uws-go-replace", _go_replace)
+
+
 def decode_utf8(data: bytes) -> str:
-    """Decodes bytes as UTF-8, replacing invalid sequences with U+FFFD as Go ``encoding/json`` does."""
-    return data.decode("utf-8", errors="replace")
+    """Decodes bytes as UTF-8, replacing each invalid byte with U+FFFD as Go ``encoding/json`` does."""
+    return data.decode("utf-8", errors="openudon-uws-go-replace")
 
 
 def _reject_constant(name: str) -> Any:
-    raise DecodeError(f"invalid JSON literal {name}")
+    raise JsonSyntaxError(f"invalid JSON literal {name}")
 
 
 def _parse_float(text: str) -> float:
@@ -108,7 +125,7 @@ def _parse_iterative(text: str, reject_duplicates: bool) -> JsonValue:
         return i
 
     def fail(msg: str, at: int) -> DecodeError:
-        return DecodeError(f"invalid JSON: {msg} at offset {at}")
+        return JsonSyntaxError(f"invalid JSON: {msg} at offset {at}")
 
     def read_key(i: int, frame: list[Any]) -> int:
         if i >= n or text[i] != '"':
@@ -213,7 +230,7 @@ def parse_strict_json(text: str, *, reject_duplicates: bool = False) -> JsonValu
     if text.startswith("﻿"):
         raise DecodeError("JSON document starts with a byte order mark")
     if text.strip(" \t\r\n") == "":
-        raise DecodeError("JSON document is empty")
+        raise JsonSyntaxError("JSON document is empty")
     try:
         value = json.loads(
             text,
@@ -223,7 +240,7 @@ def parse_strict_json(text: str, *, reject_duplicates: bool = False) -> JsonValu
             object_pairs_hook=pairs,
         )
     except json.JSONDecodeError as exc:
-        raise DecodeError(f"invalid JSON: {exc}") from exc
+        raise JsonSyntaxError(f"invalid JSON: {exc}") from exc
     except RecursionError:
         value = _parse_iterative(text, reject_duplicates)
     else:

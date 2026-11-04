@@ -11,7 +11,7 @@ from typing import Any
 import pytest
 
 from openudon_uws.diagnostics import DecodeError
-from openudon_uws.strict import parse_profile_yaml, parse_strict_json, parse_strict_yaml
+from openudon_uws.strict import decode_utf8, parse_profile_yaml, parse_strict_json, parse_strict_yaml
 from tests.oracle import Oracle
 
 VECTORS = Path(__file__).parent / "vectors"
@@ -87,7 +87,7 @@ def test_json_decoding_matches_go(oracle: Oracle, tmp_path: Path) -> None:
     for text, f in zip(cases, files, strict=True):
         expected = go[str(f)]
         try:
-            actual: Any = parse_strict_json(f.read_bytes().decode("utf-8", errors="replace"))
+            actual: Any = parse_strict_json(decode_utf8(f.read_bytes()))
             ok, err = True, ""
         except DecodeError as exc:
             actual, ok, err = None, False, str(exc)
@@ -131,3 +131,19 @@ def test_profile_yaml_decoding_matches_go(oracle: Oracle, tmp_path: Path) -> Non
         elif ok and typed(json.loads(json.dumps(actual))) != typed(json.loads(json.dumps(expected.value))):
             mismatches.append(f"{text!r}: go value {expected.value!r} != py value {actual!r}")
     assert not mismatches, f"{len(mismatches)} of {len(cases)} mismatches:\n" + "\n".join(mismatches)
+
+
+def test_invalid_utf8_matches_go(oracle: Oracle, tmp_path: Path) -> None:
+    """Go replaces every invalid byte with U+FFFD (not every maximal invalid subpart)."""
+    cases = [b'"a\xe2\x82b"', b'"\x80\x80"', b'"\xc0\xaf"', b'"\xed\xa0\x80"', b'"\xf0\x9f\x98"', b'"\xf4\x90\x80\x80"',
+             b'{"\xe2\x82": 1}', b'"\xff"', b'"ok \xe2\x82\xac"']  # fmt: skip
+    files = []
+    for i, data in enumerate(cases):
+        f = tmp_path / f"utf8-{i}.json"
+        f.write_bytes(data)
+        files.append(f)
+    go = oracle.run("json-unmarshal", files)
+    for data, f in zip(cases, files, strict=True):
+        expected = go[str(f)]
+        assert expected.valid
+        assert parse_strict_json(decode_utf8(data)) == json.loads(json.dumps(expected.value)), data

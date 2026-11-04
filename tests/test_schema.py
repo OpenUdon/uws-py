@@ -74,3 +74,28 @@ def test_go_time_stand_in_fails_typed_positions() -> None:
 
     assert validate_inline({"type": "string"}, GoTime("2024-01-02T00:00:00Z"))
     assert not validate_inline({}, GoTime("2024-01-02T00:00:00Z"))
+
+
+def test_pattern_properties_mean_the_same_under_python_re() -> None:
+    """jsonschema's additionalProperties/unevaluatedProperties match patternProperties keys with Python ``re``.
+    That is Go-equivalent only for patterns without constructs whose meaning differs from RE2."""
+    import re as python_re
+
+    risky = python_re.compile(r"\$|\\[dDsSwWbB]|\[\^?]|\(\?")
+    keys: set[str] = set()
+
+    def collect(node: Any) -> None:
+        if isinstance(node, dict):
+            keys.update((node.get("patternProperties") or {}).keys())
+            for value in node.values():
+                collect(value)
+        elif isinstance(node, list):
+            for value in node:
+                collect(value)
+
+    for name in schema_names():
+        collect(schema_document(name))
+    assert keys, "expected patternProperties in the vendored schemas"
+    for pattern in keys:
+        assert not risky.search(pattern), f"{pattern!r} may match differently under Python re and Go RE2"
+        assert translate(pattern) == pattern
